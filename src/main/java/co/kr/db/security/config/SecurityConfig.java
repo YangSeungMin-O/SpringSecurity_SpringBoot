@@ -29,6 +29,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         .authorizeRequests()
         .antMatchers("/loginPage").permitAll() // 누구나 접근 허용
         .antMatchers("/failurePage").permitAll() // 누구나 접근 허용
+        .antMatchers("/favicon.ico").permitAll() // 누구나 접근 허용
         //.antMatchers("/*").authenticated() // 일반사용자 접근 가능
         .anyRequest().access("@authorizationChecker.check(request, authentication)")
         .and()

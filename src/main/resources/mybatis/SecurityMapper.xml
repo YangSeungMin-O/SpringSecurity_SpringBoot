@@ -7,8 +7,6 @@
   </select>
 
   <select id="getCount" resultType="int">
-    SELECT COUNT(*)
-    FROM TB_USER
-    WHERE USER_ID = #{userId}
+    SELECT COUNT(*) FROM tb_menu WHERE auth = #{userAuth} AND url = #{userUrl}
   </select>
 </mapper>

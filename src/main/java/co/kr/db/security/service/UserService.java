@@ -19,8 +19,8 @@ public class UserService implements UserDetailsService{
 
   @Override
   public UserVo loadUserByUsername(String userId) throws UsernameNotFoundException {
-    int a = userMapper.getCount(userId);
-    System.out.println("일치하는 계정 갯수 : " + a);
+    //int a = userMapper.getCount(userId);
+    //System.out.println("일치하는 계정 갯수 : " + a);
     //여기서 받은 유저 패스워드와 비교하여 로그인 인증
     UserVo userVo = userMapper.getUserAccount(userId);
     System.out.println("로그인 시도 : " + userId);

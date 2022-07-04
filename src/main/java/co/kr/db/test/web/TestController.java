@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-@Controller
+@RestController
 public class TestController {
   @Autowired
   TestService service;
@@ -17,4 +17,10 @@ public class TestController {
     int a = service.getCount();
     System.out.println(a);
   }*/
+
+  @GetMapping(value = "/testtest")
+  public String testtest() {
+    System.out.println("탔음");
+    return "TEST";
+  }
 }

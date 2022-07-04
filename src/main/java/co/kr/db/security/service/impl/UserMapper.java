@@ -10,5 +10,5 @@ import java.util.List;
 public interface UserMapper {
   // 로그인
   UserVo getUserAccount(String userId);
-  public int getCount(String userId);
+  public int getCount(String userAuth, String userUrl);
 }
